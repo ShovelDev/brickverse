@@ -37,4 +37,5 @@ body, html{
 }
 .toolbar *{
 	color: white;
+	margin: 5px;
 }
