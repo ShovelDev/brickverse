@@ -24,6 +24,13 @@ var mouse = {
 	y: undefined
 }
 
+var world = {
+	color: "lightblue",
+	updateColor: (color="lightblue")=>{
+		camera.style.backgroundColor = color
+	}
+}
+
 function raf(loop){
 	requestAnimationFrame(loop)
 }
