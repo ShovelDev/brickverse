@@ -4,38 +4,6 @@
 	<title>BrickVerse Test</title>
 </head>
 <body>
-	<script src="brickverse.js"></script>
-	<script type="text/javascript">
-		var btn = new brick(camera.width/2-25, camera.height/2-25, 50, 50, "red", 1, 0)
-		var mouseobj = new brick(mouse.clickX, mouse.clickY, 0.1, 0.1, "red", 1, 0)
-		
-		function loop(){
-			raf(loop)
-			btn.place()
-			mouseobj.place()
-			
-			if(mouse.down == true && mouseobj.colliding(btn)){
-				mouseobj.x = mouse.clickX
-				mouseobj.y = mouse.clickY
-				btn.width = 60
-				btn.height = 60
-				btn.x = camera.width/2-30
-				btn.y = camera.height/2-30
-			}
-			if(mouse.down == false){
-				mouseobj.x = 0
-				mouseobj.y = 0
-				btn.width = 50
-				btn.height = 50
-				btn.x = camera.width/2-25
-				btn.y = camera.height/2-25
-			}
-			
-			if(mouseobj.colliding(btn)){
-				console.log("gg")
-			}
-		}
-		loop()
-	</script>
+	<h1>Puxa, o jogo não pode ser jogado pois o script não é da brickverse :(</h1>
 </body>
 </html>
