@@ -100,6 +100,25 @@ class Player{
 	}
 }
 
+class UiText{
+	constructor(text, x, y, size, color, font="Arial"){
+		this.text = text
+		this.x = x
+		this.y = y
+		this.size = size
+		this.color = color
+		this.font = font
+	}
+	show(){
+		ctx.save()
+		ctx.beginPath();
+		ctx.fillStyle = this.color;
+		ctx.font = this.size + "px " + this.font;
+		ctx.fillText(this.text, this.x, this.y);
+		ctx.restore()
+	}
+}
+
 class brick{
 	constructor(x, y, width, height, color="red", opacity=1, rotation=0){
 		this.x = x
