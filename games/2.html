@@ -14,7 +14,7 @@
 			btn.place()
 			mouseobj.place()
 			
-			if(mouse.down == true){
+			if(mouse.down == true && mouseobj.colliding(btn)){
 				mouseobj.x = mouse.clickX
 				mouseobj.y = mouse.clickY
 				btn.width = 60
