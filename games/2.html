@@ -6,38 +6,9 @@
 <body>
 	<script src="brickverse.js"></script>
 	<script type="text/javascript">
-		var ground = new brick(0, 0, innerWidth, innerHeight, "green", 1, 0)
-
-		var coinPos = new vector(Math.random() * innerWidth, Math.random() * innerHeight)
-		var coin = new brick(coinPos.x, coinPos.y, 20, 20, "yellow", 1, 0)
-
-		var guy = new Player(innerWidth/2, innerHeight/2)
-		guy.walkspeed = 5
-
-		var coins = 0
-
-		function collet(){
-			coinPos.x = Math.random() * innerWidth
-			coinPos.y = Math.random() * innerHeight
-			coin.x = coinPos.x
-			coin.y = coinPos.y
-		}
-
+		var btn = new Player(game.width/2-25, game.height/2-25, 50, 50, "red", 0)
 		function loop(){
-			raf(loop)
-			ground.place()
-
-			if (guy.colliding(coin)) {
-				collet()
-				coins ++
-			}
-
-			coin.rotation += 5
-
-			document.title = "Coins > " + coins
-
-			coin.place()
-			guy.place()
+			btn.setup()
 		}
 		loop()
 	</script>
