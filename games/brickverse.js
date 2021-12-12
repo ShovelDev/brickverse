@@ -202,6 +202,11 @@ document.addEventListener("mouseup", (e)=>{
 	mouse.down = false
 })
 
+addEventListener('resize', (event) => {
+	camera.width = innerWidth;
+	camera.height = innerHeight;
+})
+
 setInterval(function(){
 	ctx.clearRect(0, 0, innerWidth, innerHeight)
 }, 0)
