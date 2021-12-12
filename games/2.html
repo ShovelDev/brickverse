@@ -8,6 +8,7 @@
 	<script type="text/javascript">
 		var btn = new brick(camera.width/2-25, camera.height/2-25, 50, 50, "red", 0)
 		function loop(){
+			raf(loop)
 			btn.place()
 		}
 		loop()
