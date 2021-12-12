@@ -14,10 +14,10 @@
 			btn.place()
 			mouseobj.place()
 			
-			document.addEventListener("click", (e)=>{
-				mouseobj.x = mouse.clickX
+			if(mouse.down == true){
+				ouseobj.x = mouse.clickX
 				mouseobj.y = mouse.clickY
-			})
+			}
 			if(mouse.down == false){
 				mouseobj.x = 0
 				mouseobj.y = 0
