@@ -7,9 +7,17 @@
 	<script src="brickverse.js"></script>
 	<script type="text/javascript">
 		var btn = new brick(camera.width/2-25, camera.height/2-25, 50, 50, "red", 1, 0)
+		var mouseobj = new brick(mouse.clickX, mouse.clickY, 0.1, 0.1, "red", 1, 0)
+		
 		function loop(){
 			raf(loop)
 			btn.place()
+			mouseobj.place()
+			
+			document.addEventListener("click", (e)=>{
+				mouseobj.x = mouse.clickX
+				mouseobj.y = mouse.clickY
+			})
 		}
 		loop()
 	</script>
