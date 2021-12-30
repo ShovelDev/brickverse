@@ -1,0 +1,212 @@
+var frame = `
+ ______
+|0-----|
+`
+var frame1 = `
+|------|
+`
+var frame2 = `
+|------|
+|______|
+`
+
+var frame4 = "|------|"
+
+var x = 0
+var y = 2
+
+var time = 25
+var chose = Math.random() * 6
+var points = 0
+
+setInterval(function(){
+	if (x < 0) {
+		x = 0
+	}
+	if (y < 0) {
+		y = 0
+	}
+	cls()
+	echo(frame)
+	echo(frame1)
+	echo(frame2)
+	echo("")
+	echo(frame4)
+
+	echo("X:" + x + " Y:" + y)
+
+	echo("")
+	echo("Time:" + time)
+	echo("")
+	echo("Points:" + points)
+
+	if (x == 5 && y == 0) {
+		points ++
+		x = 0
+		y = 2
+		time = 25
+	}
+
+	if (time > 0) {
+		time--
+	}
+	if(time == 0){
+		x = 0
+		y = 2
+		time = 25
+	}
+
+	if (y == 0) {
+		frame1 = `
+		|------|
+		`
+		frame2 = `
+		|------|
+		|______|
+		`
+		if (x == 0) {
+			frame = `
+			 ______
+			|0-----|
+			`
+		}
+		if (x == 1) {
+			frame = `
+			 ______
+			|-0----|
+			`
+		}
+		if (x == 2) {
+			frame = `
+			 ______
+			|--0---|
+			`
+		}
+		if (x == 3) {
+			frame = `
+			 ______
+			|---0--|
+			`
+		}
+		if (x == 4) {
+			frame = `
+			 ______
+			|----0-|
+			`
+		}
+		if (x == 5) {
+			frame = `
+			 ______
+			|-----0|
+			`
+		}
+	}
+	
+	if (y == 1) {
+		frame = `
+		______
+		|------|
+		`
+		frame2 = `
+		|------|
+		|______|
+		`
+		if (x == 0) {
+			frame1 = `
+			|0-----|
+			`
+		}
+		if (x == 1) {
+			frame1 = `
+			|-0----|
+			`
+		}
+		if (x == 2) {
+			frame1 = `
+			|--0---|
+			`
+		}
+		if (x == 3) {
+			frame1 = `
+			|---0--|
+			`
+		}
+		if (x == 4) {
+			frame1 = `
+			|----0-|
+			`
+		}
+		if (x == 5) {
+			frame1 = `
+			|-----0|
+			`
+		}
+	}
+
+	if (y == 2) {
+		frame = `
+		______
+		|------|
+		`
+		frame1 = `
+		|------|
+		`
+		if (x == 0) {
+			frame2 = `
+			|0-----|
+			|______|
+			`
+		}
+		if (x == 1) {
+			frame2 = `
+			|-0----|
+			|______|
+			`
+		}
+		if (x == 2) {
+			frame2 = `
+			|--0---|
+			|______|
+			`
+		}
+		if (x == 3) {
+			frame2 = `
+			|---0--|
+			|______|
+			`
+		}
+		if (x == 4) {
+			frame2 = `
+			|----0-|
+			|______|
+			`
+		}
+		if (x == 5) {
+			frame2 = `
+			|-----0|
+			|______|
+			`
+		}
+	}
+},20)
+
+addEventListener("keypress", (e)=>{
+	if(x <= 4 && e.key == "d"){
+		x++
+	}
+})
+addEventListener("keypress", (e)=>{
+	if(x >= 0 && e.key == "a"){
+		x--
+	}
+})
+addEventListener("keypress", (e)=>{
+	if(y <= 1 && e.key == "s"){
+		y++
+	}
+})
+addEventListener("keypress", (e)=>{
+	if(y >= 0 && e.key == "w"){
+		y--
+	}
+})
