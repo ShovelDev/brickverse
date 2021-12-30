@@ -1,0 +1,6 @@
+cls()
+echo("Page 2")
+echo("")
+echo("Welcome to page 2")
+echo("")
+click("Back", "1.1.1.1")
