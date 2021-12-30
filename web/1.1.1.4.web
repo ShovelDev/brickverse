@@ -1,0 +1,97 @@
+var i = "IM A RAINBOW"
+
+var jump_size = 0
+
+var jumping = false
+
+
+
+setInterval(function loop(){
+
+	if (jumping == false) {
+
+		jump_size++
+
+	}else{
+
+		jump_size--
+
+	}
+
+	if (jump_size >= 7) {
+
+		jumping = true
+
+	}
+
+	if (jump_size <= 0) {
+
+		jumping = false
+
+	}
+
+
+
+	if (jump_size == 0) {
+
+		color("red")
+
+		i = "IM A RED"
+
+	}
+
+	if (jump_size == 2) {
+
+		color("orange")
+
+		i = "IM A ORANGE"
+
+	}
+
+	if (jump_size == 3) {
+
+		color("yellow")
+
+		i = "IM A YELLOW"
+
+	}
+
+	if (jump_size == 4) {
+
+		color("green")
+
+		i = "IM A GREEN"
+
+	}
+
+	if (jump_size == 5) {
+
+		color("blue")
+
+		i = "IM A BLUE"
+
+	}
+
+	if (jump_size == 6) {
+
+		color("purple")
+
+		i = "IM A PURPLE"
+
+	}
+
+	if (jump_size == 7) {
+
+		color("pink")
+
+		i = "IM A PINK"
+
+	}
+
+	
+
+	cls()
+
+	echo(i)
+
+}, 1000)
